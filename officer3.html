@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Officer Dashboard</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4f6f9;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+left:-240px;
+top:0;
+width:240px;
+height:100%;
+background:#2c3e50;
+transition:0.3s;
+padding-top:20px;
+}
+
+.sidebar a{
+display:block;
+padding:14px 20px;
+color:white;
+text-decoration:none;
+}
+
+.sidebar a:hover{
+background:#34495e;
+}
+
+.sidebar.active{
+left:0;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#34495e;
+color:white;
+padding:15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.nav-left{
+display:flex;
+align-items:center;
+}
+
+.menu-btn{
+font-size:24px;
+cursor:pointer;
+margin-right:15px;
+}
+
+/* HOME LINK */
+
+.home-link{
+color:white;
+text-decoration:none;
+font-size:16px;
+padding-right:10px;
+}
+
+.home-link:hover{
+text-decoration:underline;
+}
+
+/* MAIN */
+
+.main{
+padding:25px;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card button{
+margin-top:10px;
+padding:8px 14px;
+border:none;
+background:#3498db;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.card button:hover{
+background:#2980b9;
+}
+
+/* FOOTER */
+
+.footer{
+margin-top:40px;
+background:#2c3e50;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar" id="sidebar">
+
+<a href="#">Dashboard</a>
+<a href="#">Complaints</a>
+<a href="#">Priority Queue</a>
+<a href="#">Departments</a>
+<a href="#">Analytics</a>
+<a href="#">Notifications</a>
+<a href="#">Logout</a>
+
+</div>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="nav-left">
+<span class="menu-btn" onclick="toggleSidebar()">☰</span>
+<h2>Officer Dashboard</h2>
+</div>
+
+<a href="#" class="home-link">Home</a>
+
+</div>
+
+<!-- MAIN BODY -->
+
+<div class="main">
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Complaints</h3>
+<p>View all complaints submitted.</p>
+<button>View</button>
+</div>
+
+<div class="card">
+<h3>Pending Complaints</h3>
+<p>Complaints waiting for action.</p>
+<button>Resolve</button>
+</div>
+
+<div class="card">
+<h3>High Priority</h3>
+<p>Urgent complaints to solve first.</p>
+<button>Handle</button>
+</div>
+
+<div class="card">
+<h3>Department Workload</h3>
+<p>Cases assigned to your department.</p>
+<button>Open</button>
+</div>
+
+<div class="card">
+<h3>Recent Complaints</h3>
+<p>Latest complaints from citizens.</p>
+<button>Check</button>
+</div>
+
+<div class="card">
+<h3>Reports</h3>
+<p>Generate statistics and reports.</p>
+<button>Generate</button>
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+© 2026 Case Management System | Support | Privacy | Contact
+
+</div>
+
+<script>
+
+function toggleSidebar(){
+
+let sidebar=document.getElementById("sidebar");
+
+sidebar.classList.toggle("active");
+
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
